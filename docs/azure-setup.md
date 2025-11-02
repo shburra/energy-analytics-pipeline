@@ -27,5 +27,17 @@ az group create \
 | Tags | project=energy-analytics, env=dev, owner=shk |
 
 **Status:** ✅ Created on <date>  
-**Next:** Create a container structure (raw / processed / logs).
+
+### Step 3 – Create Data Lake Containers
+
+**Goal:** Logical data organization inside Azure Data Lake Gen2.
+
+| Container | Access | Purpose |
+|------------|---------|----------|
+| raw | Private | Store raw CSV/API data from SMARD.de and OpenWeather |
+| processed | Private | Store transformed, cleaned datasets |
+| logs | Private | Store ETL run logs or temporary files |
+
+**Status:** ✅ Created on <date>  
+**Next:** Configure Access Keys / Connection String to access the Data Lake from Python.
 
