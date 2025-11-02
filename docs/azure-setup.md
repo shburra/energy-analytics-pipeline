@@ -39,5 +39,31 @@ az group create \
 | logs | Private | Store ETL run logs or temporary files |
 
 **Status:** ✅ Created on <date>  
-**Next:** Configure Access Keys / Connection String to access the Data Lake from Python.
+
+### Step 4 – Configure Secure Access (Connection String)
+
+**Goal:** Enable secure local access to Azure Data Lake from Python scripts.
+
+**Steps:**
+1. Retrieved connection string from Azure → Access Keys → Key1.
+2. Saved it locally in `.env` file (not committed to Git).
+
+
+### Step 6 – Create Azure SQL Database
+
+**Goal:** Central relational warehouse for processed energy + weather data.
+
+| Setting | Value |
+|----------|--------|
+| Database name | sqldb-energy-analytics |
+| Server | sqlsrvenergydev.database.windows.net |
+| Region | Germany West Central |
+| Tier | Basic |
+| Auth method | SQL login (adminuser) |
+| Networking | Public endpoint + Allow Azure services |
+| Tags | project=energy-analytics, env=dev, owner=shk |
+
+**Connection String:** stored locally in `.env`  
+**Status:** ✅ Created on 02.11.2025  
+**Next:** Connect via Python and create tables (schema setup).
 
